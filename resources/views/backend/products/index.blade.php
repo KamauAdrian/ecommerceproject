@@ -21,7 +21,7 @@
                         <th>Product Name</th>
                         <th>Under Category</th>
                         <th>Code Of Product</th>
-                        <th>Product Color</th>
+                        <th>Product Colour</th>
                         <th>Price</th>
                         <th>Image Gallery</th>
                         <th>Add Attribute</th>
@@ -35,19 +35,20 @@
                             <td>{{$i}}</td>
                             <td style="text-align: center;"><img src="{{url('products/small',$product->image)}}" alt="" width="50"></td>
                             <td style="vertical-align: middle;">{{$product->p_name}}</td>
-                            <td style="vertical-align: middle;">{{$product->category->name}}</td>
+                            <td style="vertical-align: middle;">#</td>
+                            {{--<td style="vertical-align: middle;">{{$product->category->name}}</td>--}}
                             <td style="vertical-align: middle;">{{$product->p_code}}</td>
-                            <td style="vertical-align: middle;">{{$product->p_color}}</td>
+                            <td style="vertical-align: middle;">{{$product->p_colour}}</td>
                             <td style="vertical-align: middle;">{{$product->price}}</td>
-                            <td style="vertical-align: middle;text-align: center;"><a href="{{route('image-gallery.show',$product->id)}}" class="btn btn-default btn-mini">Add Images</a></td>
-                            <td style="vertical-align: middle;text-align: center;"><a href="{{route('product_attr.show',$product->id)}}" class="btn btn-success btn-mini">Add Attr</a></td>
+                            <td style="vertical-align: middle;text-align: center;"><a href="#" class="btn btn-default btn-mini">Add Images</a></td>
+                            <td style="vertical-align: middle;text-align: center;"><a href="{{url('product_attr')}}/{{$product->id}}" class="btn btn-success btn-mini">Add Attr</a></td>
                             <td style="text-align: center; vertical-align: middle;">
                                 <a href="#myModal{{$product->id}}" data-toggle="modal" class="btn btn-info btn-mini">View</a>
-                                <a href="{{route('product.edit',$product->id)}}" class="btn btn-primary btn-mini">Edit</a>
+                                <a href="{{route('product_edit',$product->id,('edit'))}}" class="btn btn-primary btn-mini">Edit</a>
                                 <a href="javascript:" rel="{{$product->id}}" rel1="delete-product" class="btn btn-danger btn-mini deleteRecord">Delete</a>
                             </td>
                         </tr>
-                        {{--Pop Up Model for View Product--}}
+                        Pop Up Model for View Product
                         <div id="myModal{{$product->id}}" class="modal hide">
                             <div class="modal-header">
                                 <button data-dismiss="modal" class="close" type="button">×</button>

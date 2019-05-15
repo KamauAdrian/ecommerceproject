@@ -2,21 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class CheckOutController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    public function __construct()
+    {
+
+        $this->middleware('auth');
+
+    }
+
+
     public function index()
     {
-        $menu_active=0;
-        $categories=Category::all();
-        return view('backend.category.index',compact('menu_active','categories'));
 
     }
 
@@ -27,10 +33,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        $menu_active=2;
-        $plucked=Category::all()->pluck('name','id');
-        $cate_levels=['0'=>'Main Category']+$plucked->all();
-        return view('backend.category.create',compact('menu_active','cate_levels'));
+        //
     }
 
     /**
@@ -41,16 +44,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'name'=>'required|max:255|unique:categories,name'
-
-        ]);
-//        $data=$request->all();
-        $category = new Category();
-        $category->name = request('name');
-        $category->save();
-//        Category::create($data);
-        return redirect()->route('category_index')->with('message','Added Success!');
+        //
     }
 
     /**

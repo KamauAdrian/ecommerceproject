@@ -21,6 +21,13 @@
 </head><!--/head-->
 
 <body>
+<?php
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+
+$session  = session::get('frontSession');
+$count = DB::table('carts')->where('session_id',$session)->count();
+?>
 @include('frontend.layouts.header')
 @yield('slider')
 {{--@section('slider')--}}

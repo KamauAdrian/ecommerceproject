@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\FrontLogin;
 use App\Profile_model;
 use App\User;
 use Illuminate\Http\Request;
@@ -24,10 +25,23 @@ class UsersController extends Controller
             'email'=>'required|string|email|unique:users,email',
             'password'=>'required|min:6|confirmed',
         ]);
-        $input_data=$request->all();
-        $input_data['password']=Hash::make($input_data['password']);
-        User::create($input_data);
-        return back()->with('message','Registered already!');
+        $input_data= new User();
+        $password=request('password');
+        $input_data->password = Hash::make($password);
+        $input_data->name=request('name');
+        $input_data->email=request('email');
+        $count = DB::table('users')->count('id');
+
+        if ($count==0){
+            $input_data['is_admin']=1;
+        }
+        $input_data->save();
+        if ($input_data){
+
+            Auth::login($input_data);
+            return redirect('/')->with('message','Registered successfully!');
+        }
+
     }
     public function login(Request $request){
         $input_data=$request->all();
@@ -39,6 +53,7 @@ class UsersController extends Controller
         }
     }
     public function logout(){
+        session::forget('session_id');
         Auth::logout();
         Session::forget('frontSession');
         return redirect('/');

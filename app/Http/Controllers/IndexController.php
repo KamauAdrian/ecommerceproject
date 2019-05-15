@@ -23,6 +23,7 @@ class IndexController extends Controller
     public function productdetials($id)
     {
         $detail_product=Product::findOrFail($id);
+//        $total_Stock=Product::findOrFail($id);
         return view('frontend.product-details',compact('detail_product'));
     }
 

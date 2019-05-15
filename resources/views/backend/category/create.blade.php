@@ -25,16 +25,6 @@
                                     <select name="parent_id" id="parent_id">
                                         @foreach($cate_levels as $key=>$value)
                                             <option value="{{$key}}">{{$value}}</option>
-                                            <?php
-                                            if($key!=0){
-                                                $subCategory=DB::table('categories')->select('id','name')->where('parent_id',$key)->get();
-                                                if(count($subCategory)>0){
-                                                    foreach ($subCategory as $subCate){
-                                                        echo '<option value="'.$subCate->id.'">&nbsp;&nbsp;--'.$subCate->name.'</option>';
-                                                    }
-                                                }
-                                            }
-                                            ?>
                                         @endforeach
                                     </select>
                                 </div>
@@ -45,20 +35,7 @@
                                     <textarea name="description" id="description" rows="3">{{old('description')}}</textarea>
                                 </div>
                             </div>
-                            <div class="control-group{{$errors->has('url')?' has-error':''}}">
-                                <label class="control-label">URL (Start with http://) :</label>
-                                <div class="controls">
-                                    <input type="text" name="url" id="url">
-                                    <span class="text-danger">{{$errors->first('url')}}</span>
-                                </div>
-                            </div>
-                            <div class="control-group{{$errors->has('status')?' has-error':''}}">
-                                <label class="control-label">Enable :</label>
-                                <div class="controls">
-                                    <input type="checkbox" name="status" id="status" value="1">
-                                    <span class="text-danger">{{$errors->first('status')}}</span>
-                                </div>
-                            </div>
+
                             <div class="control-group">
                                 <label for="control-label"></label>
                                 <div class="controls">

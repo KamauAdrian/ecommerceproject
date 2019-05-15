@@ -1,3 +1,7 @@
+
+
+
+
 <header id="header"><!--header-->
     <div class="header_top"><!--header_top-->
         <div class="container">
@@ -59,7 +63,7 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart <span>{{$count}}</span></a></li>
                             @if(Auth::check())
                                 <li><a href="{{url('/myaccount')}}"><i class="fa fa-user"></i> My Account</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-lock"></i> Logout </a>
