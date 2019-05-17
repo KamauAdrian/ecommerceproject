@@ -34,8 +34,8 @@
 </head>
 <body>
 
-@include('backEnd.layouts.header')
-@include('backEnd.layouts.nav')
+@include('backend.layouts.header')
+@include('backend.layouts.nav')
 
 <!--main-container-part-->
 <div id="content">
