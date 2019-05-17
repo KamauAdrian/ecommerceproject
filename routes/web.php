@@ -77,5 +77,10 @@ Route::group(['middleware'=>['auth','admin']],function (){
     Route::put('/admin/coupon/{id}/update','CouponController@update')->name('coupon_update');
     Route::get('delete-coupon/{id}','CouponController@destroy');
 
+    //countries area
+    Route::get('/admin/country/add','CountriesController@create')->name('country_create');
+    Route::post('/admin/country/add','CountriesController@store')->name('country_store');
+    Route::get('/admin/countries/list','CountriesController@index')->name('country_index');
+
 
 });
