@@ -16,8 +16,8 @@
         </li>
         <li class="submenu {{$menu_active==4? ' active':''}}"> <a href="#"><i class="icon icon-th-list"></i> <span>Coupons</span></a>
             <ul>
-                <li><a href="#">Add New Coupon</a></li>
-                <li><a href="#">List Coupons</a></li>
+                <li><a href="{{route('coupon_create')}}">Add New Coupon</a></li>
+                <li><a href="{{route('coupon_index')}}">List Coupons</a></li>
             </ul>
         </li>
     </ul>

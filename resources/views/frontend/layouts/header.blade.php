@@ -10,14 +10,14 @@
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
                             <li><a href="#"><i class="fa fa-phone"></i> 010 010010</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> info@nodomain.com</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> info@destinykenya.go.ke</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="social-icons pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{url("facebook.com/destinyKenya")}}"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
@@ -34,29 +34,19 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/logo.png')}}" alt="" /></a>
+                        <a href="{{url('/')}}" style="height: 200em">DESTINY KENYA</a>
                     </div>
                     <div class="btn-group pull-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                 USA
-                                <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Canada</a></li>
-                                <li><a href="#">UK</a></li>
-                            </ul>
                         </div>
 
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                 DOLLAR
-                                <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Canadian Dollar</a></li>
-                                <li><a href="#">Pound</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -65,7 +55,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart <span>{{$count}}</span></a></li>
                             @if(Auth::check())
-                                <li><a href="{{url('/myaccount')}}"><i class="fa fa-user"></i> My Account</a></li>
+                                <li><a href="{{url('/myaccount')}}" title="my account"><i class="fa fa-user"></i>  {{auth()->user()->name}}</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-lock"></i> Logout </a>
                                 </li>
                             @else

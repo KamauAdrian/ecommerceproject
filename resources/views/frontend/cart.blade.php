@@ -5,7 +5,7 @@
 @section('content')
     <?php
     use App\Product;
-    use Illuminate\Support\Facades\DB;
+
 ?>
     <section id="cart_items">
         <div class="container">
@@ -28,12 +28,11 @@
                     </thead>
                     <tbody>
                     @foreach($cart_datas as $cart_data)
-                        <?php
-                        $image_products = Product::where('id',$cart_data->product_id)->get('image');
-                        ?>
+
                         <tr>
                             <td class="cart_product">
-                                    <a href=""><img src="{{url('products/small',$image_products)}}" alt="" style="width: 100px;"></a>
+
+                                    <a href=""><img src="{{url('products/small',$cart_data->image)}}" alt="" style="width: 100px;"></a>
                             </td>
                             <td class="cart_description">
                                 <h4><a href="">{{$cart_data->product_name}}</a></h4>
@@ -55,7 +54,7 @@
                                 <p class="cart_total_price">$ {{$cart_data->price*$cart_data->quantity}}</p>
                             </td>
                             <td class="cart_delete">
-                                <a class="cart_quantity_delete" href="{{url('/cart/deleteItem',$cart_data->id)}}"><i class="fa fa-times"></i></a>
+                                <a class="cart_quantity_delete" title="Delete item from my cart" href="{{url('/cart/deleteItem',$cart_data->id)}}"><i class="fa fa-times"></i></a>
                             </td>
                         </tr>
                     @endforeach

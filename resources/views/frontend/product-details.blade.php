@@ -30,6 +30,7 @@
                                 <input type="hidden" name="product_name" value="{{$detail_product->p_name}}">
                                 <input type="hidden" name="product_code" value="{{$detail_product->p_code}}">
                                 <input type="hidden" name="product_colour" value="{{$detail_product->p_colour}}">
+                                <input type="hidden" name="image" value="{{$detail_product->image}}">
                                 <input type="hidden" name="stock" value="{{$detail_product->stock}}">
                                 <input type="hidden" name="price" value="{{$detail_product->price}}" id="dynamicPriceInput">
                                 <div class="product-information"><!--/product-information-->

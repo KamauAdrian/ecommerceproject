@@ -27,12 +27,13 @@ class CartController extends Controller
 
         $session_id=Session::get('frontSession');
         $cart_datas=Cart::where('session_id',$session_id)->get();
+
         $total_price=0;
         foreach ($cart_datas as $cart_data){
-
+            $image_products = Product::where('id',$cart_data->products_id)->get();
             $total_price+=$cart_data->price*$cart_data->quantity;
         }
-        return view('frontend.cart',compact('cart_datas','total_price'));
+        return view('frontend.cart',compact('cart_datas','total_price','image_products'));
     }
     public function addToCart(Request $request)
     {
@@ -50,6 +51,7 @@ class CartController extends Controller
         $inputToCart->quantity = request('quantity');
         $inputToCart->size = request('size');
         $stock = request('stock');
+        $inputToCart->image = request('image');
         $inputToCart->session_id = session::get('frontSession');
         $inputToCart->user_email=auth()->user()->email;
 
@@ -72,7 +74,7 @@ class CartController extends Controller
                     return redirect('/viewcart')->with('message','Item Added To Cart Already');
                 }
             }else{
-                return back()->with('message','Stock is not Available!');
+                return redirect()->back()->with('message','Stock is not Available!');
             }
 
     }
