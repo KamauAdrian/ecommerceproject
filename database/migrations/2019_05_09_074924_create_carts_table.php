@@ -19,7 +19,7 @@ class CreateCartsTable extends Migration
             $table->string('product_name');
             $table->string('product_code');
             $table->string('product_colour');
-            $table->string('size');
+            $table->string('size')->nullable();
             $table->float('price');
             $table->integer('quantity');
             $table->string('user_email');

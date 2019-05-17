@@ -70,6 +70,16 @@ class ProductsController extends Controller
             $image = $request->file('image');
             if ($image->isValid()){
                 $fileName = $image->getClientOriginalName();
+
+
+
+
+                $large_image = public_path('products/large'.$fileName);
+
+
+                $image->move($large_image);
+
+
                 $product->image = $fileName;
             }
         }

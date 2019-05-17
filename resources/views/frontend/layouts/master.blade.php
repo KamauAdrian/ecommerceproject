@@ -6,29 +6,36 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>@yield('title','Master Page')</title>
-    {{--<link href="{{url('frontEnd/css/bootstrap.min.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{url('frontEnd/css/font-awesome.min.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{url('frontEnd/css/prettyPhoto.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{url('frontEnd/css/price-range.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{url('frontEnd/css/animate.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{url('frontEnd/css/main.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{url('frontEnd/css/responsive.css')}}" rel="stylesheet">--}}
+    <link href="{{url('frontEnd/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url('frontEnd/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{url('frontEnd/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{url('frontEnd/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{url('frontEnd/css/animate.css')}}" rel="stylesheet">
+    <link href="{{url('frontEnd/css/main.css')}}" rel="stylesheet">
+    <link href="{{url('frontEnd/css/responsive.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('easyzoom/css/easyzoom.css')}}" />
+
+
+
+
+
 
     {{--online resources--}}
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/prettyPhoto.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/price-range.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/animate.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/main.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/responsive.css" rel="stylesheet">
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/bootstrap.min.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/font-awesome.min.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/prettyPhoto.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/price-range.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/animate.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/main.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/frontEnd/css/responsive.css" rel="stylesheet">--}}
+    {{--<link href="https://myecommproject.herokuapp.com/easyzoom/css/easyzoom.css" rel="stylesheet">--}}
 
-    <!--[if lt IE 9]>
+
+<!--[if lt IE 9]>
     <!--<script src="{{asset('frontEnd/js/html5shiv.js')}}"></script>-->
     <!--<script src="{{asset('frontEnd/js/respond.min.js')}}"></script>-->
     <![endif]-->
-    <link rel="stylesheet" href="{{asset('easyzoom/css/easyzoom.css')}}" />
-    <link href="https://myecommproject.herokuapp.com/easyzoom/css/easyzoom.css" rel="stylesheet">
+
 
 </head><!--/head-->
 
@@ -47,24 +54,25 @@ $count = DB::table('carts')->where('session_id',$session)->count();
 {{--@show--}}
 @yield('content')
 @include('frontend.layouts.footer')
-{{--<script src="{{url('frontEnd/js/jquery.js')}}"></script>--}}
-{{--<script src="{{url('frontEnd/js/bootstrap.min.js')}}"></script>--}}
-{{--<script src="{{url('frontEnd/js/jquery.scrollUp.min.js')}}"></script>--}}
-{{--<script src="{{url('frontEnd/js/price-range.js')}}"></script>--}}
-{{--<script src="{{url('frontEnd/js/jquery.prettyPhoto.js')}}"></script>--}}
-{{--<script src="{{url('frontEnd/js/main.js')}}"></script>--}}
-{{--<script src="{{url('js/font-awesome.js')}}"></script>--}}
-{{--<script src="{{url('easyzoom/dist/easyzoom.js')}}"></script>--}}
+<script src="{{url('frontEnd/js/jquery.js')}}"></script>
+<script src="{{url('frontEnd/js/bootstrap.min.js')}}"></script>
+<script src="{{url('frontEnd/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{url('frontEnd/js/price-range.js')}}"></script>
+<script src="{{url('frontEnd/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{url('frontEnd/js/main.js')}}"></script>
+<script src="{{url('js/font-awesome.js')}}"></script>
+<script src="{{url('easyzoom/dist/easyzoom.js')}}"></script>
 
 
-{{--online resources --}}
-<script src="https://myecommproject.herokuapp.com/frontEnd/js/jquery.js"></script>
-<script src="https://myecommproject.herokuapp.com/frontEnd/js/bootstrap.min.js"></script>
-<script src="https://myecommproject.herokuapp.com/frontEnd/js/jquery.scrollUp.min.js"></script>
-<script src="https://myecommproject.herokuapp.com/frontEnd/js/price-range.js"></script>
-<script src="https://myecommproject.herokuapp.com/frontEnd/js/jquery.prettyPhoto.js"></script>
-<script src="https://myecommproject.herokuapp.com/frontEnd/js/main.js"></script>
-<script src="https://myecommproject.herokuapp.com/easyzoom/dist/easyzoom.js"></script>
+{{--online resources--}}
+{{--<script src="https://myecommproject.herokuapp.com/frontEnd/js/jquery.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/frontEnd/js/bootstrap.min.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/frontEnd/js/jquery.scrollUp.min.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/frontEnd/js/price-range.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/frontEnd/js/jquery.prettyPhoto.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/frontEnd/js/main.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/js/font-awesome.js"></script>--}}
+{{--<script src="https://myecommproject.herokuapp.com/easyzoom/dist/easyzoom.js"></script>--}}
 <script>
     // Instantiate EasyZoom instances
     var $easyzoom = $('.easyzoom').easyZoom();
