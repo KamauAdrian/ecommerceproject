@@ -32,6 +32,13 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function shop()
+    {
+        $products=Product::all();
+        $byCate="";
+        return view('frontend.products',compact('products','byCate'));
+    }
+
     public function create()
     {
         //
