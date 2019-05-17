@@ -1,4 +1,4 @@
-@extends('frontEnd.layouts.master')
+@extends('frontend.layouts.master')
 @section('title','Detial Page')
 @section('slider')
 @endsection

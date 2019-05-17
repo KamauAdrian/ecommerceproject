@@ -19,15 +19,17 @@
     <link href="https://myecommproject.herokuapp.com/frontEnd/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://myecommproject.herokuapp.com/frontEnd/css/prettyPhoto.css" rel="stylesheet">
     <link href="https://myecommproject.herokuapp.com/frontEnd/css/price-range.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/animate.css.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/main.css.css.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/frontEnd/css/responsive.css.css.css" rel="stylesheet">
+    <link href="https://myecommproject.herokuapp.com/frontEnd/css/animate.css" rel="stylesheet">
+    <link href="https://myecommproject.herokuapp.com/frontEnd/css/main.css" rel="stylesheet">
+    <link href="https://myecommproject.herokuapp.com/frontEnd/css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <!--<script src="{{asset('frontEnd/js/html5shiv.js')}}"></script>-->
     <!--<script src="{{asset('frontEnd/js/respond.min.js')}}"></script>-->
     <![endif]-->
     <link rel="stylesheet" href="{{asset('easyzoom/css/easyzoom.css')}}" />
+    <link href="https://myecommproject.herokuapp.com/easyzoom/css/easyzoom.css" rel="stylesheet">
+
 </head><!--/head-->
 
 <body>
