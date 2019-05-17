@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                @include('frontEnd.layouts.category_menu')
+                @include('frontend.layouts.category_menu')
             </div>
             <div class="col-sm-9 padding-right">
                 @if(Session::has('message'))

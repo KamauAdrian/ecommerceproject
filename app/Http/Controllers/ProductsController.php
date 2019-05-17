@@ -74,10 +74,8 @@ class ProductsController extends Controller
 
 
 
-                $large_image = public_path('products/large'.$fileName);
 
-
-                $image->move($large_image);
+                $image->move('products/images',$fileName);
 
 
                 $product->image = $fileName;
