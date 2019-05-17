@@ -1,4 +1,4 @@
-@extends('backEnd.layouts.master')
+@extends('backend.layouts.master')
 @section('title','Edit Coupons Page')
 @section('content')
     <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('coupon_index')}}">Coupons</a> <a href="#" class="current">Edit Coupon</a> </div>

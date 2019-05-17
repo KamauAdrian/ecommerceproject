@@ -1,4 +1,4 @@
-@extends('backEnd.layouts.master')
+@extends('backend.layouts.master')
 @section('title','Add Category')
 @section('content')
     <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('category_index')}}">Categories</a> <a href="{{route('category_create')}}" class="current">Add New Category</a> </div>
