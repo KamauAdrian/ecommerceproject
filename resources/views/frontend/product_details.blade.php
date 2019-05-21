@@ -140,11 +140,6 @@
                 <div class="tab-pane fade" id="reviews" >
                     <div class="col-sm-12">
                         <h2>Customers Reviews and Ratings</h2>
-                        <?php
-                            use Carbon\Carbon;
-                        $customers_reviews = \App\Review::where('product_id',$detail_product->id)->get();
-
-                        ?>
                         @foreach($customers_reviews as $customers_review)
                             <ul>
                                 <li><a href=""><i class="fa fa-user"></i>{{$customers_review->name}}</a></li>

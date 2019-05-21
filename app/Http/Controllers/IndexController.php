@@ -24,10 +24,11 @@ class IndexController extends Controller
     {
 
         $detail_product=Product::find($id);
+        $customers_reviews = \App\Review::where('product_id',$id)->get();
         $relatedProducts=Product::where([['id','!=',$id],['categories_id',$detail_product->categories_id]])->get();
 
 //        $total_Stock=Product::findOrFail($id);
-        return view('frontend.product_details',compact('detail_product','relatedProducts'));
+        return view('frontend.product_details',compact('detail_product','relatedProducts','customers_reviews'));
     }
 
     /**
