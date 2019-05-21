@@ -18,7 +18,7 @@ class Product extends Model
         return $this->hasMany('App\ProductAtrr');
     }
 
-    public function reviews(){
-        return $this->hasMany('App\Review');
-    }
+//    public function reviews(){
+//        return $this->hasMany('App\Review');
+//    }
 }
