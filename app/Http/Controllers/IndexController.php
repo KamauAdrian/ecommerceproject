@@ -18,13 +18,16 @@ class IndexController extends Controller
         $products = Product::orderby('created_at','desc')->get();
         $categories = Category::all();
 
-        return view('frontend/index',compact('products','categories'));
+        return view('frontend.index',compact('products','categories'));
     }
     public function productdetials($id)
     {
-        $detail_product=Product::findOrFail($id);
+
+        $detail_product=Product::find($id);
+        $relatedProducts=Product::where([['id','!=',$id],['categories_id',$detail_product->categories_id]])->get();
+
 //        $total_Stock=Product::findOrFail($id);
-        return view('frontend.product-details',compact('detail_product'));
+        return view('frontend.product_details',compact('detail_product','relatedProducts'));
     }
 
     /**

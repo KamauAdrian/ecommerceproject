@@ -72,5 +72,141 @@
                     </div>
             </div>
         </div>
+
+        <div class="category-tab shop-details-tab"><!--category-tab-->
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#details" data-toggle="tab">Product Details</a></li>
+                    <li><a href="#companyprofile" data-toggle="tab" title="View company Profile">Company Profile</a></li>
+                    <li><a href="#reviews" data-toggle="tab" title="Write a review for this product">Customer Reviews</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="details" >
+                    <center>{{$detail_product->description}}</center>
+                </div>
+
+                <div class="tab-pane fade" id="companyprofile" >
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <a href="{{url('/product-detail',$detail_product->id)}}" title="View this product"><img src="{{asset('frontEnd/images/home/gallery1.jpg')}}" alt="" /></a>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <a href="{{url('/product-detail',$detail_product->id)}}" title="View this product"><img src="{{asset('frontEnd/images/home/gallery3.jpg')}}" alt="" /></a>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <a href="{{url('/product-detail',$detail_product->id)}}" title="View this product"><img src="{{asset('frontEnd/images/home/gallery2.jpg')}}" alt="" /></a>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <a href="{{url('/product-detail',$detail_product->id)}}" title="View this product"><img src="{{asset('frontEnd/images/home/gallery4.jpg')}}" alt="" /></a>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="reviews" >
+                    <div class="col-sm-12">
+                        <h2>Customers Reviews and Ratings</h2>
+                        <?php
+                            use Carbon\Carbon;
+                        $customers_reviews = \App\Review::where('product_id',$detail_product->id)->get();
+
+                        ?>
+                        @foreach($customers_reviews as $customers_review)
+                            <ul>
+                                <li><a href=""><i class="fa fa-user"></i>{{$customers_review->name}}</a></li>
+                                <li><a href=""><i class="fa fa-clock-o"></i>{{$customers_review->created_at}}</a></li>
+                            </ul>
+                            <p>{{$customers_review->review}}</p>
+                        @endforeach
+
+
+                        <p><b>Write Your Review</b></p>
+
+                        <form action="{{url('/product-detail',$detail_product->id)}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+                            @csrf
+										<span>
+											<input type="hidden" name="product_id" value="{{$detail_product->id}}"/>
+											<input type="text" name="name" placeholder="Your Name"/>
+											<input type="email" name="email" placeholder="Email Address"/>
+										</span>
+                            <textarea name="review" ></textarea>
+                            <b>Rating: </b> <img src="{{asset('frontEnd/images/product-details/rating.png')}}" alt="" />
+                            <input type="submit" class="btn btn-default pull-right">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--/category-tab-->
+
+
+        <div class="recommended_items"><!--recommended_items-->
+            <h2 class="title text-center">Related products</h2>
+
+            <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <?php $countChunk=0;?>
+                    @foreach($relatedProducts->chunk(3) as $chunk)
+                        <?php $countChunk++; ?>
+                        <div class="item<?php if($countChunk==1){ echo' active';} ?>">
+                            @foreach($chunk as $item)
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a href="{{url('/product-detail',$item->id)}}"><img src="{{url('/products/small',$item->image)}}" alt="" style="width: 150px;"/></a>
+                                                <h2>US ${{$item->price}}</h2>
+                                                <p>{{$item->p_name}}</p>
+                                                <a href="{{url('/product-detail',$item->id)}}" class="btn btn-default add-to-cart">View Product</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+                <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div><!--/recommended_items-->
     </div>
 @endsection

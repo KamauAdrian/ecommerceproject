@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Review;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -94,6 +95,27 @@ class ProductsController extends Controller
     public function show($id)
     {
         //
+    }
+    public function reviews(Request $request)
+    {
+        //validating the request
+        $this->validate($request,[
+            'name'=>'required',
+            'email'=>'required | email',
+            'review'=>'required | min:5'
+        ]);
+        //create the request
+        $customer_review = new Review();
+
+        $customer_review->product_id = request('product_id');
+        $customer_review->name = request('name');
+        $customer_review->email = request('email');
+        $customer_review->review = request('review');
+        //save
+
+        $customer_review->save();
+        //redirect
+        return redirect()->back()->with('message','Thanks for your review we appreciate you for being a good customer');
     }
 
     /**

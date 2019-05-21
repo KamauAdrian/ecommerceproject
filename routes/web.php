@@ -44,7 +44,9 @@ Route::get('/logout','UsersController@logout');
 
 //view product
 Route::get('/product-detail/{id}','IndexController@productdetials');
+Route::post('/product-detail/{id}','ProductsController@reviews');
 Route::get('/list-products','IndexController@shop');
+//Route::post('/product/reviews','ProductsController@reviews')->name('reviews');
 
 //categories view products per category
 Route::get('/category/{id}/view','IndexController@listbycategory');
