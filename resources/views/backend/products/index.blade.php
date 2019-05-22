@@ -30,18 +30,21 @@
                     </thead>
                     <tbody>
                     @foreach($products as $product)
-                        <?php $i++; ?>
+                        <?php
+                                $category = $product->categories_id;
+                        $i++;
+                        ?>
                         <tr class="gradeC">
                             <td>{{$i}}</td>
                             <td style="text-align: center;"><img src="{{url('products/small',$product->image)}}" alt="" width="50"></td>
                             <td style="vertical-align: middle;">{{$product->p_name}}</td>
-                            <td style="vertical-align: middle;">#</td>
+                            <td style="vertical-align: middle;">{{$category}}</td>
                             {{--<td style="vertical-align: middle;">{{$product->category->name}}</td>--}}
                             <td style="vertical-align: middle;">{{$product->p_code}}</td>
                             <td style="vertical-align: middle;">{{$product->p_colour}}</td>
                             <td style="vertical-align: middle;">{{$product->price}}</td>
                             <td style="vertical-align: middle;text-align: center;"><a href="#" class="btn btn-default btn-mini">Add Images</a></td>
-                            <td style="vertical-align: middle;text-align: center;"><a href="{{url('product_attr')}}/{{$product->id}}" class="btn btn-success btn-mini">Add Attr</a></td>
+                            <td style="vertical-align: middle;text-align: center;"><a href="#" class="btn btn-success btn-mini">Add Attr</a></td>
                             <td style="text-align: center; vertical-align: middle;">
                                 <a href="#myModal{{$product->id}}" data-toggle="modal" class="btn btn-info btn-mini">View</a>
                                 <a href="{{route('product_edit',$product->id,('edit'))}}" class="btn btn-primary btn-mini">Edit</a>

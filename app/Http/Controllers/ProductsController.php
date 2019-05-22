@@ -60,6 +60,7 @@ class ProductsController extends Controller
         $product = new Product();
         $product->p_name = request('p_name');
         $product->categories_id = request('categories_id');
+//        dd($product->categories_id);
         $product->p_code = request('p_code');
         $product->p_colour = request('p_colour');
         $product->description = request('description');

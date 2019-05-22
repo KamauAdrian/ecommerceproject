@@ -78,7 +78,7 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#details" data-toggle="tab">Product Details</a></li>
                     <li><a href="#companyprofile" data-toggle="tab" title="View company Profile">Company Profile</a></li>
-                    <li><a href="#reviews" data-toggle="tab" title="Write a review for this product">Customer Reviews</a></li>
+                    <li><a href="#reviews" data-toggle="tab" title="Write a review for this product">({{count($customers_reviews)}}) Customer Reviews </a></li>
                 </ul>
             </div>
             <div class="tab-content">
@@ -147,8 +147,6 @@
                             </ul>
                             <p>{{$customers_review->review}}</p>
                         @endforeach
-
-
                         <p><b>Write Your Review</b></p>
 
                         <form action="{{url('/product-detail',$detail_product->id)}}" method="POST" class="form-horizontal" enctype="multipart/form-data">
