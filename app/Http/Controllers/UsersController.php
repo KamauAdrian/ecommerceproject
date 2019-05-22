@@ -20,6 +20,14 @@ class UsersController extends Controller
     public function index(){
     return view('users.login_register');
 }
+    public function forgotpassword(){
+        return view('users.forgot');
+    }
+    public function resetpassword(){
+
+
+        return redirect('/');
+    }
     public function register(Request $request){
         $this->validate($request,[
             'name'=>'required|string|max:255',

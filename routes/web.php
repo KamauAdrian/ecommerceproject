@@ -41,6 +41,8 @@ Route::get('/login_page','UsersController@index');
 Route::post('/register_user','UsersController@register');
 Route::post('/user_login','UsersController@login');
 Route::get('/logout','UsersController@logout');
+Route::get('/forgot-password','UsersController@forgotpassword')->name('forgot');
+Route::post('/forgot-password','UsersController@resetpassword')->name('password_reset');
 
 //view product
 Route::get('/product-detail/{id}','IndexController@productdetials');

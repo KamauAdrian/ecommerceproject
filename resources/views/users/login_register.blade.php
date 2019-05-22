@@ -20,7 +20,7 @@
                         <span>
                             <input type="checkbox" class="checkbox">
                             Keep me signed in
-                        </span>
+                        </span> <a class="pull-right" href="{{route('forgot')}}">Forgot Password</a>
                         <button type="submit" class="btn btn-default">Login</button>
                     </form>
                 </div><!--/login form-->

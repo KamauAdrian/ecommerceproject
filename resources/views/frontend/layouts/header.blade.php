@@ -51,16 +51,39 @@
                     </div>
                 </div>
                 <div class="col-sm-8">
-                    <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart <span>{{$count}}</span></a></li>
+                    <div class="mainmenu pull-right">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li class="dropdown"><a href="#">Help?<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li style="color:#f5f5f5; size: 2em; text-align: center"><i class="fa fa-phone-square"> Contact Us</i><br />
+                                        0797938403
+                                    </li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">How to order</a></li>
+                                    <li><a href="#">Payment Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                    <li><a href="#">Return and Refund Policy</a></li>
+                                </ul>
+                            </li>
                             @if(Auth::check())
-                                <li><a href="{{url('/myaccount')}}" title="my account"><i class="fa fa-user"></i>  {{auth()->user()->name}}</a></li>
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-lock"></i> Logout </a>
+                                <li class="dropdown"><a href="#"><i class="fa fa-user"></i>  {{auth()->user()->name}} <i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="{{url('/myaccount')}}">My Account</a></li>
+                                        <li><a href="#">My Orders</a></li>
+                                        <li><a href="#">My Saved Items</a></li>
+
+                                            <hr style="width: 80%; position: center;">
+
+                                        <li><a href="{{ url('/logout') }}"><button type="button" style="width: 80%; position: center" class="btn btn-light"><i class="fa fa-lock"></i> Logout</button> </a></li>
+                                    </ul>
                                 </li>
+
+
                             @else
                                 <li><a href="{{url('/login_page')}}"><i class="fa fa-lock"></i> Login</a></li>
                             @endif
+                            <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart <span>{{$count}}</span></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -90,7 +113,7 @@
                                     <li><a href="{{url('/viewcart')}}">Cart</a></li>
                                 </ul>
                             </li>
-                            <li><a href="https://www.youtube.com/channel/UCH2Ir7rPaRN8ZPL9mSpclhw" target="_blank">Contact</a></li>
+                            <li><a href="#" target="_blank">Contact</a></li>
                         </ul>
                     </div>
                 </div>
