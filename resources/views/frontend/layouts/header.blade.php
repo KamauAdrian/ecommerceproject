@@ -74,13 +74,18 @@
 
                                             <hr style="width: 80%; position: center;">
 
-                                        <li><a href="{{ url('/logout') }}"><button type="button" style="width: 80%; position: center" class="btn btn-light"><i class="fa fa-lock"></i> Logout</button> </a></li>
+                                        <li><a href="{{ url('/logout') }}"><button type="button" style="width: 80%; position: center" class="btn btn-default"><i class="fa fa-lock"></i> Logout</button> </a></li>
                                     </ul>
                                 </li>
 
 
                             @else
-                                <li><a href="{{url('/login_page')}}"><i class="fa fa-lock"></i> Login</a></li>
+                                <li  class="dropdown"><a href="#"> Account <i class="fa fa-angle-down"></i></a>
+                                <ul class="sub-menu" role="menu">
+                                    <li><a href="{{url('/login_page')}}"><button style="width: 80%; position: center" type="submit" class="btn btn-default"><i class="fa fa-lock"></i> LogIn</button></a></li>
+                                    <li><p>New Customer <a href="{{url('/signup')}}">sign up</a></p></li>
+                                </ul>
+                                </li>
                             @endif
                             <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart <span>{{$count}}</span></a></li>
 

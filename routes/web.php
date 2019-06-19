@@ -38,6 +38,8 @@ Route::group(['middleware'=>'frontLogin'],function (){
 
 //user simple login
 Route::get('/login_page','UsersController@index');
+Route::get('/signin','UsersController@signin');
+Route::get('/signup','UsersController@signup');
 Route::post('/register_user','UsersController@register');
 Route::post('/user_login','UsersController@login');
 Route::get('/logout','UsersController@logout');
@@ -57,6 +59,9 @@ Route::get('/category/{id}/view','IndexController@listbycategory');
 Route::get('/','IndexController@index');
 
 Route::get('/users/charts','AdminController@users')->name('users');
+Route::get('/adminlte/charts', function (){
+    return view('backend/layouts/adminlte/index');
+});
 
 //Admin area
 Route::group(['middleware'=>['auth','admin']],function (){

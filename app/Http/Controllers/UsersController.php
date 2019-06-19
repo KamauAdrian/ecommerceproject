@@ -20,6 +20,12 @@ class UsersController extends Controller
     public function index(){
     return view('users.login_register');
 }
+    public function signin(){
+        return view('users.login');
+    }
+    public function signup(){
+        return view('users.register');
+    }
     public function forgotpassword(){
         return view('users.forgot');
     }
