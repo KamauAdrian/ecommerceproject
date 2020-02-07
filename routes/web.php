@@ -20,11 +20,6 @@ Route::group(['middleware'=>'frontLogin'],function (){
     Route::put('/update-profile/{id}','UsersController@updateprofile');
     Route::put('/update-password/{id}','UsersController@updatepassword');
 
-    ///// Cart Area /////////
-    Route::post('/addToCart','CartController@addToCart')->name('addToCart');
-    Route::get('/viewcart','CartController@index');
-    Route::get('/cart/deleteItem/{id}','CartController@deleteItem');
-
     //apply coupon code
     Route::post('/apply-coupon','CouponController@applycoupon');
     //checkout
@@ -35,6 +30,15 @@ Route::group(['middleware'=>'frontLogin'],function (){
     Route::get('/cod','OrdersController@cod');
     Route::get('/paypal','OrdersController@paypal');
 });
+
+Route::get('/paypal',function (){
+    return view('frontend.payment.testpay');
+});
+
+///// Cart Area /////////
+Route::post('/addToCart','CartController@addToCart')->name('addToCart');
+Route::get('/viewcart','CartController@index');
+Route::get('/cart/deleteItem/{id}','CartController@deleteItem');
 
 //user simple login
 Route::get('/login_page','UsersController@index');
@@ -67,7 +71,7 @@ Route::get('/adminlte/charts', function (){
 Route::group(['middleware'=>['auth','admin']],function (){
     Route::get('/admin','AdminController@index');
     /// Category Area
-    Route::get('/admin/categories','CategoriesController@index')->name('category_index');
+    Route::get('/admin/categories','CategoriesController@index')->name('categories_index');
     Route::get('/admin/category/create','CategoriesController@create')->name('category_create');
     Route::post('/admin/category/create','CategoriesController@store')->name('category_store');
     Route::post('/admin/category/{id}','CategoriesController@edit')->name('category_edit');
@@ -90,7 +94,7 @@ Route::group(['middleware'=>['auth','admin']],function (){
     //countries area
     Route::get('/admin/country/add','CountriesController@create')->name('country_create');
     Route::post('/admin/country/add','CountriesController@store')->name('country_store');
-    Route::get('/admin/countries/list','CountriesController@index')->name('country_index');
+    Route::get('/admin/countries/list','CountriesController@index')->name('countries_index');
 
 
 });

@@ -19,12 +19,12 @@
                         <div class="col-sm-5">
                             <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails">
                                 <a href="{{url('products/large',$detail_product->image)}}">
-                                    <img src="{{url('products/small',$detail_product->image)}}" alt="" id="dynamicImage"/>
+                                    <img src="{{url('products/images',$detail_product->image)}}" alt="" id="dynamicImage"/>
                                 </a>
                             </div>
                         </div>
                         <div class="col-sm-7">
-                            <form action="{{route('addToCart')}}" method="post" role="form">
+                            <form action="{{route('addToCart')}}" method="post">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <input type="hidden" name="product_id" value="{{$detail_product->id}}">
                                 <input type="hidden" name="product_name" value="{{$detail_product->p_name}}">
@@ -181,7 +181,7 @@
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <a href="{{url('/product-detail',$item->id)}}"><img src="{{url('/products/small',$item->image)}}" alt="" style="width: 150px;"/></a>
+                                                <a href="{{url('/product-detail',$item->id)}}"><img src="{{url('/products/images',$item->image)}}" alt="" style="width: 150px;"/></a>
                                                 <h2>US ${{$item->price}}</h2>
                                                 <p>{{$item->p_name}}</p>
                                                 <a href="{{url('/product-detail',$item->id)}}" class="btn btn-default add-to-cart">View Product</a>

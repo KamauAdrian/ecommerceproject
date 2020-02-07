@@ -32,7 +32,7 @@
                         <tr>
                             <td class="cart_product">
 
-                                    <a href=""><img src="{{url('products/small',$cart_data->image)}}" alt="" style="width: 100px;"></a>
+                                    <a href=""><img src="{{url('products/images',$cart_data->image)}}" alt="" style="width: 100px;"></a>
                             </td>
                             <td class="cart_description">
                                 <h4><a href="">{{$cart_data->product_name}}</a></h4>

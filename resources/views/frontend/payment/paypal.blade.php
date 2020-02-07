@@ -22,4 +22,6 @@
         </div>
     </div>
     <div style="margin-bottom: 20px;"></div>
+{{--    client_id = AfyXE0i3MScq_BP3yZfh1GhTB5k965gnBY4CK3fltqMFherX9p-eFVEYOjFmM-wVjhFtHOCxfmaLnL0---}}
+{{--    secret = EM2_LPIbxa6qJxLCjHsUbTEk8X-J7HlvYkY4_mdVLnNdYXZMQ0-BXdIce0QZb0ta15ON9Vc1OQRfzlz8--}}
 @endsection

@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 @section('title','Add Category')
 @section('content')
-    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('category_index')}}">Categories</a> <a href="{{route('category_create')}}" class="current">Add New Category</a> </div>
+    <div id="breadcrumb"> <a href="{{url('/admin')}}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="{{route('categories_index')}}">Categories</a> <a href="{{route('category_create')}}" class="current">Add New Category</a> </div>
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span12">
@@ -50,15 +50,20 @@
     </div>
 @endsection
 @section('jsblock')
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.ui.custom.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.uniform.js') }}"></script>
-    <script src="{{ asset('js/select2.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.validate.js') }}"></script>
-    <script src="{{ asset('js/matrix.js') }}"></script>
-    <script src="{{ asset('js/matrix.form_validation.js') }}"></script>
-    <script src="{{ asset('js/matrix.tables.js') }}"></script>
-    <script src="{{ asset('js/matrix.popover.js') }}"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/jquery.ui.custom.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-colorpicker.js')}}"></script>
+    <script src="{{asset('js/jquery.toggle.buttons.js')}}"></script>
+    <script src="{{asset('js/masked.js')}}"></script>
+    <script src="{{asset('js/jquery.uniform.js')}}"></script>
+    <script src="{{asset('js/select2.min.js')}}"></script>
+    <script src="{{asset('js/matrix.js')}}"></script>
+    <script src="{{asset('js/matrix.form_common.js')}}"></script>
+    <script src="{{asset('js/wysihtml5-0.3.0.js')}}"></script>
+    <script src="{{asset('js/jquery.peity.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-wysihtml5.js')}}"></script>
+    <script>
+        $('.textarea_editor').wysihtml5();
+    </script>
 @endsection

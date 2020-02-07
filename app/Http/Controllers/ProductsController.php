@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use App\Review;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -74,10 +75,13 @@ class ProductsController extends Controller
                 $fileName = $image->getClientOriginalName();
 
 
-
-
-
+//                $image_resize = Image::make($image->getRealPath());
+//                $image_resize->resize(300, 300);
+//                $image_resize->move('products/small',$fileName);
                 $image->move('products/images',$fileName);
+
+
+
 
 
                 $product->image = $fileName;
@@ -155,7 +159,7 @@ class ProductsController extends Controller
             'price'=>'required|numeric',
             'image'=>'image|mimes:png,jpg,jpeg|max:1000',
         ]);
-        dd('asdfghjkl;');
+//        dd('asdfghjkl;');
         $updated_product->p_name = request('p_name');
         $updated_product->p_colour = request('p_colour');
         $updated_product->p_code = request('p_code');

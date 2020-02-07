@@ -14,7 +14,10 @@ class CountriesController extends Controller
      */
     public function index()
     {
+        $countries = Country::orderBy('created_at','desc')->get();
+        $menu_active = 0;
 
+    return view('backend.countries.index',compact('countries','menu_active'));
     }
 
     /**
@@ -44,7 +47,7 @@ $input_country->country_name = request('country_name');
 $input_country->country_code = request('country_code');;
 
 $input_country->save();
-return redirect('/admin')->with('message','added country success');
+return redirect()->route('countries_index')->with('message',' country added successfully');
     }
 
     /**

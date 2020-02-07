@@ -5,7 +5,7 @@
         <li class="submenu {{$menu_active==2? ' active':''}}"> <a href="#"><i class="icon icon-th-list"></i> <span>Categories</span></a>
             <ul>
                 <li><a href="{{url('/admin/category/create')}}">Add New Category</a></li>
-                <li><a href="#">List Categories</a></li>
+                <li><a href="{{route('categories_index')}}">List Categories</a></li>
             </ul>
         </li>
         <li class="submenu {{$menu_active==3? ' active':''}}"> <a href="#"><i class="icon icon-th-list"></i> <span>Products</span></a>
@@ -23,7 +23,7 @@
         <li class="submenu {{$menu_active==5? ' active':''}}"> <a href="#"><i class="icon icon-th-list"></i> <span>Countries</span></a>
             <ul>
                 <li><a href="{{route('country_create')}}">Add Country</a></li>
-                <li><a href="#">List Countries</a></li>
+                <li><a href="{{route('countries_index')}}">List Countries</a></li>
             </ul>
         </li>
     </ul>

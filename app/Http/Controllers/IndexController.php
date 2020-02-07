@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class IndexController extends Controller
 {
@@ -17,8 +18,10 @@ class IndexController extends Controller
     {
         $products = Product::orderby('created_at','desc')->get();
         $categories = Category::all();
+        $set = rand(0,10000);
+        session::put('frontsession',$set);
 
-        return view('frontend.index',compact('products','categories'));
+        return view('frontend.index',compact('products','categories','set'));
     }
     public function productdetials($id)
     {
@@ -30,6 +33,8 @@ class IndexController extends Controller
 //        $total_Stock=Product::findOrFail($id);
         return view('frontend.product_details',compact('detail_product','relatedProducts','customers_reviews'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.

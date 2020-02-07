@@ -22,16 +22,16 @@
 
 
     {{--online resource links--}}
-    <link href="https://myecommproject.herokuapp.com/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/colorpicker.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/uniform.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/select2.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/fullcalendar.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/matrix-style.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/matrix-media.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/css/bootstrap-wysihtml5.css" rel="stylesheet">
-    <link href="https://myecommproject.herokuapp.com/font-awesome/css/font-awesome.css" rel="stylesheet">
+{{--    <link href="https://myecommproject.herokuapp.com/css/bootstrap.min.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/bootstrap-responsive.min.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/colorpicker.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/uniform.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/select2.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/fullcalendar.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/matrix-style.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/matrix-media.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/css/bootstrap-wysihtml5.css" rel="stylesheet">--}}
+{{--    <link href="https://myecommproject.herokuapp.com/font-awesome/css/font-awesome.css" rel="stylesheet">--}}
 </head>
 <body>
 

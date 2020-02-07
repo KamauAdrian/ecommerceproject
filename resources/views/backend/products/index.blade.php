@@ -31,8 +31,8 @@
                     <tbody>
                     @foreach($products as $product)
                         <?php
-                                $category = $product->categories_id;
-                        $i++;
+                            $category = $product->categories_id;
+                            $i++;
                         ?>
                         <tr class="gradeC">
                             <td>{{$i}}</td>

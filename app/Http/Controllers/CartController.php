@@ -35,31 +35,42 @@ class CartController extends Controller
         }
         return view('frontend.cart',compact('cart_datas','total_price','image_products'));
     }
+
+
     public function addToCart(Request $request)
     {
-        $inputToCart= new Cart();
 
-        Session::forget('discount_amount_price');
-        Session::forget('coupon_code');
+    $checkUser = auth()->user();
+    if ($checkUser){
 
+        $loggedInUser = auth()->user()->email;
+        session::put('frontSession',$loggedInUser);
+        $sessionId = session::get('frontSession',null);
+        if ($sessionId!=null){
+//            dd('success '.$sessionId);
+            $inputToCart= new Cart();
 
-        $inputToCart->product_id = request('product_id');
-        $inputToCart->product_name = request('product_name');
-        $inputToCart->product_code = request('product_code');
-        $inputToCart->product_colour = request('product_colour');
-        $inputToCart->price = request('price');
-        $inputToCart->quantity = request('quantity');
-        $inputToCart->size = request('size');
-        $stock = request('stock');
-        $inputToCart->image = request('image');
-        $inputToCart->session_id = session::get('frontSession');
-        $inputToCart->user_email=auth()->user()->email;
+            Session::forget('discount_amount_price');
+            Session::forget('coupon_code');
 
 
+            $inputToCart->product_id = request('product_id');
+            $inputToCart->product_name = request('product_name');
+            $inputToCart->product_code = request('product_code');
+            $inputToCart->product_colour = request('product_colour');
+            $inputToCart->price = request('price');
+            $inputToCart->quantity = request('quantity');
+            $inputToCart->size = request('size');
+            $stock = request('stock');
+            $inputToCart->image = request('image');
+            $inputToCart->session_id = session::get('frontSession',null);
+            $inputToCart->user_email=auth()->user()->email;
 
-        if($inputToCart->size==""){
-            $inputToCart->size=null;
-        }
+
+
+            if($inputToCart->size==""){
+                $inputToCart->size=null;
+            }
 
 
 
@@ -76,6 +87,27 @@ class CartController extends Controller
             }else{
                 return redirect()->back()->with('message','Stock is not Available!');
             }
+
+
+        }else{
+            dd('no session set');
+        }
+
+    }else{
+        return redirect()->back()->with('message','please login to proceed');
+
+//        $set = rand(1000,1000000);
+//        session::put('cartdata',$set);
+//        $sessionId = session::get('cartdata',null);
+//        if ($sessionId!=null){
+////            dd('success '.$sessionId);
+//
+//        }else{
+//            dd('no session set');
+//        }
+    }
+
+
 
     }
 

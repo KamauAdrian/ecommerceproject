@@ -54,6 +54,7 @@ class UsersController extends Controller
         if ($input_data){
 
             Auth::login($input_data);
+            Session::put('frontSession',$input_data['email']);
             return redirect('/')->with('message','Registered successfully!');
         }
 

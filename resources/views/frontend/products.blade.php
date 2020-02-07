@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                @include('frontEnd.layouts.category_menu')
+                @include('frontend.layouts.category_menu')
             </div>
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
@@ -23,7 +23,7 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <a href="{{url('/product-detail',$product->id)}}"><img src="{{url('products/small/',$product->image)}}" alt="" /></a>
+                                            <a href="{{url('/product-detail',$product->id)}}"><img src="{{url('products/images/',$product->image)}}" alt="" /></a>
                                             <h2>$ {{$product->price}}</h2>
                                             <p>{{$product->p_name}}</p>
                                             <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default add-to-cart">View Product</a>

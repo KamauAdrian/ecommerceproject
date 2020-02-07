@@ -42,7 +42,7 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name'=>'required|max:255|unique:categories,name'
+            'name'=>'required|max:255'
 
         ]);
 //        $data=$request->all();
