@@ -31,18 +31,20 @@ Route::group(['middleware'=>'frontLogin'],function (){
     Route::get('/paypal','OrdersController@paypal');
 });
 
-Route::get('/paypal',function (){
-    return view('frontend.payment.testpay');
-});
 
 ///// Cart Area /////////
 Route::post('/addToCart','CartController@addToCart')->name('addToCart');
 Route::get('/viewcart','CartController@index');
 Route::get('/cart/deleteItem/{id}','CartController@deleteItem');
+Route::get('/cart/update-quantity/{id}/1','CartController@add');
+Route::get('/cart/update-quantity/{id}/-1','CartController@remove');
 
 //user simple login
-Route::get('/login_page','UsersController@index');
+Route::get('/login_page','UsersController@index')->name('user_login');
 Route::get('/signin','UsersController@signin');
+
+Route::get('/customer_login','UsersController@customer');
+Route::post('/logingin','UsersController@customerloggedin');
 Route::get('/signup','UsersController@signup');
 Route::post('/register_user','UsersController@register');
 Route::post('/user_login','UsersController@login');

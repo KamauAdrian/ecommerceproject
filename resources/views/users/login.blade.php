@@ -14,8 +14,9 @@
                 <div class="col-sm-6">
                     <div class="login-form"><!--login form-->
                         <h2>Login to your account</h2>
-                        <form action="{{url('/user_login')}}" method="post" class="form-horizontal">
+                        <form action="{{url('/logingin')}}" method="post" class="form-horizontal">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <input type="hidden" name="item" value="{{$item}}">
                             <input type="email" placeholder="Email" name="email"/>
                             <input type="password" placeholder="Password" name="password"/>
                             <span>

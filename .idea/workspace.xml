@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="071a46be-6649-497e-ae6c-2c7bf2a2a53d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/product_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/product_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +139,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../town" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -204,7 +212,9 @@
       <workItem from="1580796100082" duration="10670000" />
       <workItem from="1580883086196" duration="6076000" />
       <workItem from="1580969196733" duration="7888000" />
-      <workItem from="1581057135137" duration="4873000" />
+      <workItem from="1581057135137" duration="5807000" />
+      <workItem from="1581573702000" duration="3084000" />
+      <workItem from="1582006678392" duration="8980000" />
     </task>
     <servers />
   </component>
@@ -216,14 +226,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="533" y="187" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1580973149826" />
-    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl" timestamp="1581059383672">
+    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl" timestamp="1582017501431">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581059383672" />
-    <state x="493" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1581057133759">
+    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1582017501431" />
+    <state x="493" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1582006687779">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="493" y="256" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581057133759" />
+    <state x="493" y="256" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1582006687779" />
     <state x="590" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580888026484">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

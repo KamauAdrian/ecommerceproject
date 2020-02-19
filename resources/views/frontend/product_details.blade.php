@@ -11,7 +11,7 @@
             <div class="col-sm-9 padding-right">
                 @if(Session::has('message'))
                     <div class="alert alert-success text-center" role="alert">
-                        {{Session::get('message')}}
+                        {!! Session::get('message') !!}
                     </div>
                 @endif
                     <div class="product-details"><!--product-details-->

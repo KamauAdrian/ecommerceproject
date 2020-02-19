@@ -111,4 +111,24 @@ class UsersController extends Controller
             return back()->with('oldpassword','Old Password is Inconrrect!');
         }
     }
+
+
+    public function customer(){
+
+        return view('users.login');
+    }
+
+    public function customerloggedin(Request $request){
+        $input_data=$request->all();
+
+
+        if(Auth::attempt(['email'=>$input_data['email'],'password'=>$input_data['password']])){
+            Session::put('frontSession',$input_data['email']);
+            $item_id = request('item');
+            return redirect('/product-detail/'.$item_id);
+        }else{
+            return back()->with('message','Account is not Valid!');
+        }
+
+    }
 }

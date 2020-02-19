@@ -94,7 +94,14 @@ class CartController extends Controller
         }
 
     }else{
-        return redirect()->back()->with('message','please login to proceed');
+
+        $item = request('product_id');
+
+        return view('/users.login',compact('item'));
+
+
+//        $msg = 'Please <a href="'. route('user_login') . '"> login </a> to proceed!!';
+//        return redirect()->back()->with('message',$msg);
 
 //        $set = rand(1000,1000000);
 //        session::put('cartdata',$set);
@@ -171,9 +178,25 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function add(Request $request, $id)
     {
-        //
+        $update_item=Cart::findOrFail($id);
+        $item_id = $update_item->id;
+        $res = DB::table('carts')->where('id',$item_id)->increment('quantity',1);
+        if ($res){
+            return redirect()->back();
+        }
+
+    }
+    public function remove(Request $request, $id)
+    {
+        $update_item=Cart::findOrFail($id);
+        $item_id = $update_item->id;
+        $res = DB::table('carts')->where('id',$item_id)->decrement('quantity',1);
+        if ($res){
+            return redirect()->back();
+        }
+
     }
 
     /**

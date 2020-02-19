@@ -64,6 +64,7 @@ class OrdersController extends Controller
     {
         $user_order=Order::where('user_id',Auth::id())->first();
         return view('frontend.payment.cod',compact('user_order'));
+        Session::forget('frontsession');
     }
     public function paypal()
     {
