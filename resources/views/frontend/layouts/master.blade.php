@@ -32,8 +32,7 @@
 
 
 <!--[if lt IE 9]>
-    <!--<script src="{{asset('frontEnd/js/html5shiv.js')}}"></script>-->
-    <!--<script src="{{asset('frontEnd/js/respond.min.js')}}"></script>-->
+
     <![endif]-->
 
 

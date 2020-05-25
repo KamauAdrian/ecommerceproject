@@ -55,7 +55,7 @@ Route::post('/forgot-password','UsersController@resetpassword')->name('password_
 //view product
 Route::get('/product-detail/{id}','IndexController@productdetials');
 Route::post('/product-detail/{id}','ProductsController@reviews');
-Route::get('/list-products','IndexController@shop');
+Route::get('/list-products/{id}','IndexController@listbycategory');
 //Route::post('/product/reviews','ProductsController@reviews')->name('reviews');
 
 //categories view products per category

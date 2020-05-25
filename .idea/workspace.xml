@@ -4,7 +4,14 @@
     <list default="true" id="071a46be-6649-497e-ae6c-2c7bf2a2a53d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/products.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="blade" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -95,7 +102,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
@@ -115,13 +121,17 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
     </include_path>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1380" />
-    <option name="height" value="788" />
   </component>
   <component name="ProjectId" id="1XKJYcclpam66NqSDmHuFOounA8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -209,7 +219,20 @@
       <workItem from="1581573702000" duration="3084000" />
       <workItem from="1582006678392" duration="8980000" />
       <workItem from="1582105677460" duration="615000" />
-      <workItem from="1582172790234" duration="1300000" />
+      <workItem from="1582172790234" duration="2028000" />
+      <workItem from="1582182076189" duration="9096000" />
+      <workItem from="1582193519977" duration="624000" />
+      <workItem from="1582265895222" duration="4871000" />
+      <workItem from="1583215706377" duration="1240000" />
+      <workItem from="1583387875886" duration="2419000" />
+      <workItem from="1583474659538" duration="1203000" />
+      <workItem from="1583821079689" duration="1191000" />
+      <workItem from="1583905374253" duration="1355000" />
+      <workItem from="1583992155914" duration="597000" />
+      <workItem from="1584337913488" duration="597000" />
+      <workItem from="1584515372393" duration="6113000" />
+      <workItem from="1584538757310" duration="567000" />
+      <workItem from="1585068175875" duration="2366000" />
     </task>
     <servers />
   </component>
@@ -221,18 +244,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="533" y="187" width="524" height="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1580973149826" />
-    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl" timestamp="1582017501431">
+    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584539238877">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1582017501431" />
-    <state x="493" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1582006687779">
+    <state x="583" y="187" width="424" height="482" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1584539238877" />
+    <state x="493" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1582193528427">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="493" y="256" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1582006687779" />
+    <state x="493" y="256" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1582193528427" />
     <state x="590" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580888026484">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="590" y="349" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1580888026484" />
+    <state x="464" y="192" key="run.anything.popup" timestamp="1584518255163">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="464" y="192" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1584518255163" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -54,6 +54,9 @@ class OrdersController extends Controller
 
 
         $input_data->save();
+
+        Session::put('new_order_total',request('grand_total'));
+        Session::put('order_payment_method',request('payment_method'));
         if($payment_method=="COD"){
             return redirect('/cod');
         }else{
@@ -68,12 +71,20 @@ class OrdersController extends Controller
     }
     public function paypal()
     {
-        $who_buying=Order::where('user_id',Auth::id())->first();
+        $order_totals = Session::get('new_order_total');
+        $order_payment_method = Session::get('order_payment_method');
+
+//        $who_buying = DB::table('orders')->where(['grand_total',$order_totals],['payment_method',$order_payment_method])->get();
+        $who_buying = Order::where('grand_total',$order_totals && 'payment_method',$order_payment_method)->get();
         return view('frontend.payment.paypal',compact('who_buying'));
     }
     public function create()
     {
         //
+
+//            export PATH="$PATH:/home/adrian/Development/flutter/bin"
+
+
     }
 
     /**

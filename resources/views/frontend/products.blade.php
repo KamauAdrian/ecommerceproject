@@ -9,15 +9,9 @@
                 @include('frontend.layouts.category_menu')
             </div>
             <div class="col-sm-9 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <?php
-                    if($by_category!=""){
-                        $products=$list_products;
-                        echo '<h2 class="title text-center">Category '.$by_category->name.'</h2>';
-                    }else{
-                        echo '<h2 class="title text-center">List Products</h2>';
-                    }
-                    ?>
+                <h2 class="features_items"><!--features_items-->
+
+
                     @foreach($products as $product)
                             <div class="col-sm-4">
                                 <div class="product-image-wrapper">
@@ -35,6 +29,5 @@
                 </div>
             </div>
         </div>
-    </div>
 
 @endsection
